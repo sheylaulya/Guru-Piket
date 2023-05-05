@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:guru_tamu_vers2/pages/dataSiswa.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -285,31 +286,35 @@ class HomePage extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Container(
-                              width: 170,
-                              height: 80,
-                              decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10)),
-                                color: Colors.white,
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.grey.withOpacity(0.5),
-                                    spreadRadius: 1,
-                                    blurRadius: 2,
-                                    offset: Offset(0, 3),
-                                  ),
-                                ],
-                              ),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Image(image: AssetImage('assets/img/read.png'), width: 45,),
-                                  SizedBox(width: 5,),
-                                  Text('DATA SISWA', style:TextStyle(fontSize: 14, fontWeight: FontWeight.w700,  color: Color(0xff6F6F6F),),)
-                                ],
-                              ),
-                              ),
+                          GestureDetector(
+                              onTap: () => Navigator.push(context,  MaterialPageRoute(builder: (context) => DataSiswa())),
+                          
+                            child: Container(
+                                width: 170,
+                                height: 80,
+                                decoration: BoxDecoration(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10)),
+                                  color: Colors.white,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey.withOpacity(0.5),
+                                      spreadRadius: 1,
+                                      blurRadius: 2,
+                                      offset: Offset(0, 3),
+                                    ),
+                                  ],
+                                ),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image(image: AssetImage('assets/img/read.png'), width: 45,),
+                                    SizedBox(width: 5,),
+                                    Text('DATA SISWA', style:TextStyle(fontSize: 14, fontWeight: FontWeight.w700,  color: Color(0xff6F6F6F),),)
+                                  ],
+                                ),
+                                ),
+                          ),
                               SizedBox(width: 15,),
                                Container(
                               width: 170,

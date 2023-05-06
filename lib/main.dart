@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:guru_tamu_vers2/pages/AbsensiDokum.dart';
+import 'package:guru_tamu_vers2/pages/AbsensiPilihKelas.dart';
+import 'package:guru_tamu_vers2/pages/AbsensiPilihSiswa.dart';
+import 'package:guru_tamu_vers2/pages/AbsensiReview.dart';
 import 'package:guru_tamu_vers2/pages/auth/login.dart';
 import 'package:guru_tamu_vers2/pages/dataSiswa.dart';
 import 'package:guru_tamu_vers2/pages/home.dart';
@@ -15,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage()
+      home: AbsensiReview()
     );
   }
 }
